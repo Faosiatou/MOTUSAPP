@@ -1,13 +1,12 @@
 ```mermaid
 sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice->>John: Hello John, how are you?
-    loop Healthcheck
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts <br/>prevail!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+    CLIENT->>+MOTUS: 
+    MOTUS->>+CLIENT: 
+    CLIENT->>+AUTH: 
+    AUTH ->>+CLIENT: login
+    MOTUS->>+CLIENT: Index.html
+    CLIENT->>+MOTUS: quel est le mot du jour?
+    MOTUS->>+CLIENT: Mot du jour
+    CLIENT->>+CLIENT: Essais, score
+
 ```
